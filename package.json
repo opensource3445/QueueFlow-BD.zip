@@ -1,0 +1,12 @@
+{
+  "name": "queueflow-bd", "version": "0.1.0", "private": true, "type": "module",
+  "scripts": {
+    "build": "node scripts/build-config.js",
+    "demo": "node scripts/build-config.js --demo && npx serve public",
+    "start": "npx serve public",
+    "test:booking": "node tests/booking-tests.js",
+    "test:queue": "node tests/queue-tests.js",
+    "test:demo": "node tests/demo-tests.mjs"
+  },
+  "devDependencies": { "@supabase/supabase-js": "2.45.4", "serve": "14.2.4" }
+}

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Customer · QueueFlow BD</title><link rel="stylesheet" href="css/style.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><a class="brand" href="index.html">QueueFlow BD</a><a href="#biz">Businesses</a><a href="#mine">My bookings</a><button class="sec" id="bell" aria-expanded="false" aria-controls="notif"><span aria-hidden="true">🔔</span> <span class="sr">Notifications, </span><span id="nc">0</span><span class="sr"> unread</span></button><button class="sec" id="out">Log out</button></nav>
+<main id="main" tabindex="-1" class="container"><section id="notif" class="card hidden"><h2>Notifications</h2><ul id="nl"></ul></section>
+<section id="biz"><h1>Find a business</h1><div class="row"><div><label for="q">Search by name</label><input id="q"></div>
+<div><label for="cat">Category</label><select id="cat"><option value="">All</option></select></div></div>
+<p id="count" role="status" class="muted"></p><div id="list" class="grid"></div></section>
+<section id="detail" class="card hidden"><h2 id="dname" tabindex="-1"></h2><p id="dinfo" class="muted"></p>
+<label for="svc">Service</label><select id="svc"></select>
+<label for="mode">Mode</label><select id="mode"><option value="walkin">Walk-in queue</option><option value="appt">Appointment</option></select>
+<div id="timebox" class="hidden"><label for="time">Time</label><input id="time" type="time"></div>
+<p><button id="book">Confirm booking</button> <button class="sec" id="close">Close</button></p></section>
+<section id="mine"><h2>My bookings</h2><div id="bk" class="grid"></div></section>
+<section id="track" class="card hidden" aria-live="polite"><h2>Live queue</h2>
+<p>Your token <span class="big" id="tk"></span></p><p>Now serving: <b id="srv"></b> · Ahead of you: <b id="ahead"></b></p>
+<p>Estimated wait: <b id="eta"></b> <span class="muted">(estimate only, not guaranteed)</span></p><p>Status: <span class="badge" id="st"></span></p></section>
+<section id="inv" class="card hidden"><h2>Staff invitations</h2><ul id="invl"></ul></section>
+<section class="card"><h2>Account</h2><form id="pfm" class="card"><h3>My profile</h3><label for="pn">Full name</label><input id="pn" required minlength="2" autocomplete="name"><label for="pp">Phone</label><input id="pp" type="tel" autocomplete="tel"><p><button>Save profile</button></p></form><h3>Delete account</h3><p class="muted">Deleting removes your profile, bookings and notifications permanently.</p><button class="sec" id="del">Delete my account</button> <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></section></main><div id="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script type="module" src="js/pages/customer.js"></script></body></html>

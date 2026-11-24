@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Business · QueueFlow BD</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/business.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><a class="brand" href="index.html">QueueFlow BD</a><span id="bn" class="muted"></span><a href="customer.html">Customer view</a><button class="sec" id="out">Log out</button></nav>
+<div class="layout"><aside class="side" id="side" aria-label="Dashboard sections"><a href="#" data-t="overview">Overview</a><a href="#" data-t="queue">Queue</a><a href="#" data-t="services">Services</a><a href="#" data-t="counters">Counters &amp; staff</a><a href="#" data-t="profile">Profile</a><a href="#" data-t="reports">Reports</a></aside>
+<main id="main" tabindex="-1" class="main"><h1 class="sr">Business dashboard</h1>
+<section id="create" class="card hidden"><h2>Register your business</h2><p class="muted">An admin must approve it before customers can book.</p>
+<form id="cf"><label for="cn">Name</label><input id="cn" required minlength="2"><label for="cc">Category</label><select id="cc"></select>
+<label for="ca">Address</label><input id="ca"><label for="cp">Phone</label><input id="cp"><p><button>Submit for approval</button></p></form></section>
+<div id="app" class="hidden"><p id="banner" class="card hidden"></p>
+<section id="t-overview"><h2>Today</h2><div class="grid" id="ov"></div></section>
+<section id="t-queue" class="hidden"><h2>Live queue</h2><p><label for="cnt" class="sr">Counter</label><select id="cnt" aria-label="Counter" style="width:auto"><option value="">No counter</option></select> <button id="next">Call next</button> <button class="sec" id="pause"></button></p>
+<div class="tw"><table><thead><tr><th scope="col">Token</th><th scope="col">Customer</th><th scope="col">Service</th><th scope="col">Time</th><th scope="col">Status</th><th scope="col">Actions</th></tr></thead><tbody id="qb"></tbody></table></div></section>
+<section id="t-services" class="hidden"><h2>Services</h2><form id="sf" class="row"><div><label for="sn">Name</label><input id="sn" required></div><div><label for="sp">Price</label><input id="sp" type="number" min="0" step="0.01" required></div><div><label for="sd">Minutes</label><input id="sd" type="number" min="1" max="480" required></div><button>Add</button></form>
+<div class="tw"><table aria-label="Services"><thead><tr><th scope="col">Name</th><th scope="col">Price</th><th scope="col">Duration</th><th scope="col">Status</th><th scope="col">Actions</th></tr></thead><tbody id="sb"></tbody></table></div></section>
+<section id="t-counters" class="hidden"><h2>Counters</h2><form id="kf" class="row"><div><label for="kn">Counter name</label><input id="kn" required></div><button>Add counter</button></form>
+<div class="tw"><table aria-label="Counters"><thead><tr><th scope="col">Counter</th><th scope="col">Status</th><th scope="col">Staff</th><th scope="col">Actions</th></tr></thead><tbody id="kb"></tbody></table></div>
+<h3>Team</h3><div class="tw"><table aria-label="Team"><thead><tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Action</th></tr></thead><tbody id="tb"></tbody></table></div>
+<h3>Add staff (owner only)</h3><form id="mf" class="row"><div><label for="me">Staff email</label><input id="me" type="email" required></div><div><label for="mr">Role</label><select id="mr"><option>staff</option><option>manager</option></select></div><button>Add</button></form></section>
+<section id="t-profile" class="hidden"><h2>Business profile</h2><form id="pf"><label for="pn">Name</label><input id="pn" required><label for="pd">Description</label><input id="pd">
+<label for="pa">Address</label><input id="pa"><label for="pph">Phone</label><input id="pph"><div class="row"><div><label for="po">Opens</label><input id="po" type="time"></div><div><label for="pc">Closes</label><input id="pc" type="time"></div></div><p><button>Save</button></p></form></section>
+<section id="t-reports" class="hidden"><h2>Reports</h2><div class="row"><div><label for="rf">From date</label><input id="rf" type="date"></div><div><label for="rt">To date</label><input id="rt" type="date"></div><button id="rg">Show</button></div><div class="grid" id="rs"></div></section>
+</div></main></div><div id="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script><script type="module" src="js/business/dashboard.js"></script></body></html>
